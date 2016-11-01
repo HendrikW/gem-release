@@ -61,7 +61,7 @@ module GemRelease
     end
 
     def filter_gemspecs(files)
-      files.reject { |i| i[/^vendor/i] }.map { |spec| File.dirname(spec) }
+      files.reject { |i| i[/^vendor\//i] }.map { |spec| File.dirname(spec) }
     end
 
     def in_bootstrapped_dir
